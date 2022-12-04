@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { API_KEY } from '../constants';
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { API_KEY, BASE_API_URL, BASE_IMAGE_URL } from "../constants";
 
 function MovieDetail() {
   const [movie, setMovie] = useState(null);
@@ -33,7 +33,7 @@ function MovieDetail() {
   if (movie === null) return <p className="text-white">Movie Not Found</p>;
 
   const getMovieReleaseYear = (date) => {
-    if (date === '') return null;
+    if (date === "") return null;
     return new Date(date).getFullYear();
   };
 
@@ -54,7 +54,7 @@ function MovieDetail() {
         </Link>
 
         <p className="py-1 px-5 bg-yellow-400 font-bold text-gray-800 rounded-full w-fit">
-          {getMovieReleaseYear(movie.release_date) || 'Unknown'}
+          {getMovieReleaseYear(movie.release_date) || "Unknown"}
         </p>
         <h2 className="font-bold text-7xl uppercase">{movie.title}</h2>
         <p className="max-w-2xl">{movie.overview}</p>
