@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Movie } from '../components/Movie';
+import Movie from '../components/Movie';
 import { API_KEY, BASE_API_URL } from '../constants';
 
 function Home() {

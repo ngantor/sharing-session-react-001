@@ -20,4 +20,4 @@ function Movie({ image, title, vote, id }) {
   );
 }
 
-export { Movie };
+export default Movie;
