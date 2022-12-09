@@ -6,7 +6,9 @@ function Home() {
   const [movies, setMovies] = useState([]);
 
   const getApi = async () => {
-    const response = await fetch(`${BASE_API_URL}/movie/popular?api_key=${API_KEY}`);
+    const response = await fetch(
+      `${BASE_API_URL}/movie/popular?api_key=${API_KEY}`
+    );
     const data = await response.json();
     setMovies(data.results);
     console.log(data.results);
